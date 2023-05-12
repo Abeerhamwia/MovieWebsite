@@ -1,1 +1,98 @@
 /* You can add global styles to this file, and also import other style files */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+}
+
+body{
+    
+    background: url(img.jpg);
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #404040;
+    background-blend-mode: multiply;
+}
+
+
+header{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 99;
+    
+}
+
+
+i{
+    color: #fff;
+    cursor: pointer;
+}
+
+header .search-box{
+    flex: 1;
+    position: relative;
+}
+
+.search-box input{
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    background: #f2f2f2;
+    border-radius: 30px;
+    color: gray;
+    font-size: 16px;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 40px;
+}
+.search-box button{
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: scale(0.9);
+    background: gray;
+}
+header ul{
+    flex: 2;
+    display: flex;
+    justify-content: space-evenly;
+    
+    
+}
+header ul li{
+    list-style: none;
+    
+}
+header ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px 15px;
+}
+
+header ul li a:hover {
+    color: yellow;
+}
+
+
+
+
+
+
+
