@@ -25,16 +25,23 @@ export class MovieApiServiceService {
     this.searchResultSubject.next(result);
   }
 
+  //getMovieDetails
   getMovieDetails(data: any): Observable<any> { 
     const apiUrl = `${environment.TitleEndpoint}${encodeURIComponent(data)}`;
   return this.httpClient.get<any>(apiUrl);
   }
 
+  //getMovieReviews
   getMovieReviews(data: any): Observable<any> { 
     const apiUrl = `${environment.ReviewsEndpoint}${encodeURIComponent(data)}`;
   return this.httpClient.get<any>(apiUrl);
   }
 
-
+  //getActorDetails
+  getActorDetails(data: any): Observable<any> { 
+    const apiUrl = `${environment.ActorEndpoint}${encodeURIComponent(data)}`;
+  return this.httpClient.get<any>(apiUrl);
+  }
+  
 
 }

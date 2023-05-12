@@ -1,7 +1,8 @@
 <h2>The Cast</h2>
 <ul>
   <li *ngFor="let actor of getMovieDetailResult.actorList">
-    <img [src]="actor.image" alt="{{ actor.name }}">
+    <img [src]="actor.image" alt="{{ actor.name }}"
+    [routerLink]="['/actor',actor.id]">
     <div>
       <h3>{{ actor.name }}</h3>
       <p>{{ actor.asCharacter }}</p>

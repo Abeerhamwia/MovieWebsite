@@ -1,1 +1,20 @@
-<p>actor-details works!</p>
+<div class="contain mt-5">
+    <img [src]="getActorDetailResult.image" alt="{{ getActorDetailResult.name }}">
+    <div class="col-md-8">
+      <h2>{{ getActorDetailResult.name }}</h2>
+      <div class="row">
+        <div class="card">
+          <h3>Personal Info</h3>
+          <ul>
+            <li><strong>Birthdate:</strong> {{ getActorDetailResult.birthDate }}</li>
+            <li><strong>Height:</strong> {{ getActorDetailResult.height }}</li>
+            <li><strong>Awards:</strong> {{ getActorDetailResult.awards }}</li>
+          </ul>
+        </div>
+        <div class="card summary">
+          <h3>Summary</h3>
+          <p>{{ getActorDetailResult.summary }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
