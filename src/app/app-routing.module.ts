@@ -8,7 +8,7 @@ import { ActorDetailsComponent } from './pages/actor-details/actor-details.compo
 const routes: Routes = [
   {path:'',component:MoviesComponent},
   {path:'search',component:SearchComponent},
-  {path:'movie/:id',component:MovieDetailsComponent},
+  {path:'Movie-content/:id',component:MovieDetailsComponent},
   {path:'actor/:id',component:ActorDetailsComponent}
 ];
 

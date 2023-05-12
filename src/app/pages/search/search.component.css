@@ -27,3 +27,9 @@ img {
     width: 100%;
     cursor: pointer;
 }
+
+h5 {
+    color: #ffffff;
+    margin-left: 100px;
+    margin-top: 50px;
+  }

@@ -1,1 +1,10 @@
-<p>movie-details works!</p>
+<h2>The Cast</h2>
+<ul>
+  <li *ngFor="let actor of getMovieDetailResult.actorList">
+    <img [src]="actor.image" alt="{{ actor.name }}">
+    <div>
+      <h3>{{ actor.name }}</h3>
+      <p>{{ actor.asCharacter }}</p>
+    </div>
+  </li>
+</ul>

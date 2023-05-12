@@ -1,7 +1,11 @@
 <div class="card-container">
     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3" *ngFor="let s of searchResult">
         <div class="card skeleton">
-            <img class="image" [src]="s.image">
+            <img class="image" [src]="s.image"
+            [routerLink]="['/Movie-content',s.id]">
+        </div>
+        <div class="col-lg-9 mt-4 mb-4">
+            <h5 class="card-title">{{s.title}}</h5>
         </div>
     </div>
 </div>
