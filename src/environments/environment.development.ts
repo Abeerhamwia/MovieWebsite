@@ -5,4 +5,5 @@ export const environment = {
   TitleEndpoint: `https://imdb-api.com/en/API/Title/${apiKey}/`,
   ReviewsEndpoint: `https://imdb-api.com/API/Reviews/${apiKey}/`,
   ActorEndpoint: `https://imdb-api.com/API/Name/${apiKey}/`,
+  MoviesEndpoint: `https://imdb-api.com/en/API/MostPopularMovies/${apiKey}/`,
 };

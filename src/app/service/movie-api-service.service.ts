@@ -9,11 +9,11 @@ import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
 })
 export class MovieApiServiceService {
 
-  public keySubject  = new Subject<KeyboardEvent>()
+  public keySubject = new Subject<KeyboardEvent>()
   constructor(private httpClient: HttpClient) { }
 
   // searchmovive
-  getSearchMovie(data: any): Observable<any> { 
+  getSearchMovie(data: any): Observable<any> {
     const apiUrl = `${environment.endpoint}${encodeURIComponent(data.movieName)}`;
     return this.httpClient.get<any>(apiUrl);
   }
@@ -26,22 +26,28 @@ export class MovieApiServiceService {
   }
 
   //getMovieDetails
-  getMovieDetails(data: any): Observable<any> { 
+  getMovieDetails(data: any): Observable<any> {
     const apiUrl = `${environment.TitleEndpoint}${encodeURIComponent(data)}`;
-  return this.httpClient.get<any>(apiUrl);
+    return this.httpClient.get<any>(apiUrl);
   }
 
   //getMovieReviews
-  getMovieReviews(data: any): Observable<any> { 
+  getMovieReviews(data: any): Observable<any> {
     const apiUrl = `${environment.ReviewsEndpoint}${encodeURIComponent(data)}`;
-  return this.httpClient.get<any>(apiUrl);
+    return this.httpClient.get<any>(apiUrl);
   }
 
   //getActorDetails
-  getActorDetails(data: any): Observable<any> { 
+  getActorDetails(data: any): Observable<any> {
     const apiUrl = `${environment.ActorEndpoint}${encodeURIComponent(data)}`;
-  return this.httpClient.get<any>(apiUrl);
+    return this.httpClient.get<any>(apiUrl);
   }
-  
+
+  // getMostPopularMovies
+  getMostPopularMovies(): Observable<any> {
+    const apiUrl = `${environment.MoviesEndpoint}`;
+    return this.httpClient.get<any>(apiUrl);
+  }
+
 
 }
