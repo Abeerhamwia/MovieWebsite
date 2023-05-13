@@ -8,18 +8,21 @@ import { MovieApiServiceService } from 'src/app/service/movie-api-service.servic
 })
 export class MoviesComponent implements OnInit {
 
-  constructor(private service: MovieApiServiceService) {}
+  constructor(private service: MovieApiServiceService) { }
 
   trendingMovieResult: any = [];
+  filteredMovies: any[] = [];
+  allMovies: any[] = [];
 
   ngOnInit(): void {
-    
+
     this.trendingMovies();
 
+    
     this.service.getAllMovies().subscribe(result => {
       console.log(result);
     });
-    
+
   }
 
   //Trending movies
@@ -27,5 +30,10 @@ export class MoviesComponent implements OnInit {
     this.service.getMostPopularMovies().subscribe(result => {
       this.trendingMovieResult = result.items;
     });
+  }
+
+  //filter movies
+  filterMovies(category:string) {
+    
   }
 }
