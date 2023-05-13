@@ -15,6 +15,10 @@ export class MoviesComponent implements OnInit {
   ngOnInit(): void {
     
     this.trendingMovies();
+
+    this.service.getAllMovies().subscribe(result => {
+      console.log(result);
+    });
     
   }
 

@@ -1,20 +1,23 @@
-.card  {
+.card {
     width: 200px;
-    box-shadow: 0px 5px 10px 0px rgb(0,0,0,0.5);
+    box-shadow: 0px 5px 10px 0px rgb(0, 0, 0, 0.5);
     max-height: 290px;
     min-height: 290px;
-    margin-top: 100px;
+    margin-top: 50px;
     margin-left: 50px;
 }
+
 @keyframes skeleton-loading {
     0% {
         background-color: hs1(200, 20%, 80%);
     }
-    100%{
+
+    100% {
         background-color: hs1(200, 20%, 95%);
     }
 }
-.skeleton{
+
+.skeleton {
     animation: skeleton-loading 0.5s linear infinite alternate;
 }
 
@@ -23,6 +26,7 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 20px;
 }
+
 img {
     width: 100%;
     cursor: pointer;
@@ -32,4 +36,61 @@ h5 {
     color: #ffffff;
     margin-left: 100px;
     margin-top: 50px;
+}
+
+section {
+    display: table;
+}
+
+.example-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+}
+
+.example-button-row {
+    display: table-cell;
+    max-width: 600px;
+}
+
+.example-button-row .mat-mdc-button-base {
+    margin: 8px 8px 8px 0;
+}
+
+.example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 30px;
+  }
+  
+  button {
+    background-color: #433e3e;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: 0;
+    cursor: pointer;
+    border-radius: 50px;
+    margin-left: 20px;
+    margin-top: 100px;
+    font-weight: bold;
   }

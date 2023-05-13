@@ -89,3 +89,5 @@ header ul li a{
 header ul li a:hover {
     color: yellow;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

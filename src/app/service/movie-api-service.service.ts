@@ -49,5 +49,11 @@ export class MovieApiServiceService {
     return this.httpClient.get<any>(apiUrl);
   }
 
+  // getAllMovies
+  getAllMovies(): Observable<any> {
+    const apiUrl = `${environment.AllMoviesEndpoint}`;
+    return this.httpClient.get<any>(apiUrl);
+  }
+
 
 }
